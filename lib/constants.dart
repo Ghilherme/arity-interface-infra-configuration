@@ -5,8 +5,10 @@ import 'flow_type.dart';
 
 const defaultPadding = 20.0;
 
+double maxGPSPoints = 155000000000;
+
 List<FlowType> flowType = <FlowType>[
-  FlowType(flowType: 'Mobile', value: 40),
+  FlowType(flowType: 'Mobile', value: 30),
   FlowType(flowType: 'Device', value: 1)
 ];
 
@@ -69,7 +71,6 @@ List<GeographicLocation> geographicLocation = <GeographicLocation>[
   GeographicLocation(geographicLocation: 'US Virgin Islands', value: 1),
   GeographicLocation(geographicLocation: 'American Samoa', value: 1),
   GeographicLocation(geographicLocation: 'Norther Mariana Islands', value: 1),
-  GeographicLocation(geographicLocation: 'Alabama', value: 1),
   GeographicLocation(geographicLocation: 'Canada', value: 1),
   GeographicLocation(geographicLocation: 'Mexico', value: 1),
 ];
@@ -106,4 +107,29 @@ List<TimeWindow> timeWindow = <TimeWindow>[
   TimeWindow(timeWindow: '21:00-22:00', value: 5),
   TimeWindow(timeWindow: '22:00-23:00', value: 4),
   TimeWindow(timeWindow: '23:00-00:00', value: 3),
+];
+
+const List<int> numberBrokers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+const List<String> ec2Type = [
+  '',
+  'ec2 small',
+  'ec2 medium',
+  'ec2 large',
+  'r5n.2xlarge',
+  'c5.9xlarge'
+];
+
+const List<String> ebsType = [
+  '',
+  'EBS small',
+  'EBS medium',
+  'EBS large',
+  'gp3',
+];
+const List<String> totalEBSStorage = ['', '50gb per node', '100 gb per node'];
+const List<String> slaInfra = [
+  '',
+  'Use already existing cluster',
+  'Require new cluster'
 ];
